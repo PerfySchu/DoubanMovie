@@ -1,0 +1,34 @@
+
+<view class='container'>
+  <view class='slide'>
+    <!-- 指示器， 自动播放， 间隔时间， 每页播放时间 -->
+    <swiper indicator-dots='true' autoplay='true' interval='8000' duration='1000'>
+      <block wx:for="{{ imgUrls }}">
+        <swiper-item>
+          <image src='{{ item }}' class='slide-image' width='355' height='150' mode='aspectFill'></image>
+        </swiper-item>
+      </block>
+    </swiper>  
+  </view>
+  <view class='board'>
+    <navigator url='../list/list?type=in_theator' hover-class='none'>
+      <view class='board-item'>
+        <text>正在热映</text>
+        <image src='../../images/arrowright.png' mode='aspectFill'></image>
+      </view>
+    </navigator>
+    <view class='board-item'>
+      <text>即将上映</text>
+      <image src='../../images/arrowright.png' mode='aspectFill'></image>
+    </view>
+    <view class='board-item'>
+      <text>Top250</text>
+      <image src='../../images/arrowright.png' mode='aspectFill'></image>
+    </view>
+    <view class='board-item'>
+      <text>北美票房榜</text>
+      <image src='../../images/arrowright.png' mode='aspectFill'></image>
+    </view>
+  </view>
+
+</view>
